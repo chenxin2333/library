@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			????
+			//函数的概念：封装，重用，可扩展(参数)--解决代码冗余，扩展功能。
+			//函数的声明：普通函数声明
+			//函数的名字：函数自身的全部代码。----退出匿名函数
+			//函数的返回值：函数都有一条return语句，return语句导致函数停止执行，并返回它的表达式的值给调用者。 	如果return语句没有相关的表达式，则返回undefined。
+			/*function fn(){
+				return '1';
+			}
+			
+			fn();
+			* */
+			
+			//document.write(fn);//function fn(){ return '1'; }
+			//alert((function fn(){
+				//return '1';
+			//})());
+			
+			/*function fn(){
+				alert(1);
+			}
+			
+			alert(fn());*///undefined
+			
+			
+			//变量的作用域：全局变量，局部变量
+			/*function fn(){
+				var num=100;
+				num1=200;//没有var，变成全局。
+			}
+			fn();
+			alert(num);//报错的，无法访问，num是局部变量
+			alert(num1);//200*/
+			
+			/*function fn(){
+				var num1,num2;//定义多个变量
+				var a=b=3;//var a; b;    a:局部   b:全局
+			}
+			fn();
+			alert(b);
+			alert(a);*/
+			
+			//函数的参数：形参和实参
+			//形参：函数的局部变量
+//			function fn(a,b){
+//				//var a,b;
+//				return a+b;
+//			}
+//			
+//			alert(fn(2,3));//实参  2==>a   3=>b
+			
+			//打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+			/*var times=0;
+			for(var i=1000;i<=2000;i++){
+				if(i%4==0&&i%100!=0||i%400==0){
+					document.write(i+'---');
+					times++;
+					if(times%4==0){
+						document.write('<br>');
+					}
+				}
+			}*/
+			
+			/*function year(n){
+				var times=0;
+				for(var i=1000;i<=n;i++){
+					if(i%4==0&&i%100!=0||i%400==0){
+						document.write(i+'---');
+						times++;
+						if(times%4==0){
+							document.write('<br>');
+						}
+					}
+				}
+			}
+			year(3000);*/
+			
+		//输出100-200之间所有的素数。
+		/*for(var i=100;i<=200;i++){//101  2-100  100%(2-99)==0;
+			var bstop=true;//是素数。 开
+			for(var j=2;j<i;j++){
+				if(i%j==0){
+					bstop=false;//不是素数。关
+					break;//满足一次不是素数，其他的没必须执行。
+				}
+			}
+			
+			if(bstop){
+				document.write(i+'--');
+			}
+			
+		}*/
+		
+		
+		/*function fn(){
+			for(var i=100;i<=200;i++){//101  2-100  100%(2-99)==0;
+				var bstop=true;//是素数。 开
+				for(var j=2;j<i;j++){
+					if(i%j==0){
+						bstop=false;//不是素数。关
+						break;//满足一次不是素数，其他的没必须执行。
+					}
+				}
+				if(bstop){
+					document.write(i+'--');
+				}
+			}
+		}
+		fn();*/
+		
+		
+		//求1+2!+3!+...+20!的值
+		
+		
+		//5!=1*2*3*4*5;
+		
+		/*for(var result=1,i=1;i<=5;i++){
+			result*=i;
+		}
+		
+		alert(result);*/
+		
+		
+		/*function fn(n){
+			for(var result=1,i=1;i<=n;i++){
+				result*=i;
+			}
+			return result;
+		}
+		//1+2+6+24+120=153
+		alert(fn(4));*/
+		/*function fn(n){
+			for(var result=1,i=1;i<=n;i++){
+				result*=i;
+			}
+			return result;
+		}
+		
+		var result1=0;
+		for(var i=1;i<=20;i++){
+			result1+=fn(i);
+		}
+		alert(result1);*/
+		
+		
+		/*var result1=0;
+		for(var i=1;i<=20;i++){
+			var result=1;
+			for(var j=1;j<=i;j++){
+				result*=j;
+			}
+			result1+=result;
+		}
+		alert(result1);*/
+		
+		
+		
+		//完成一个梯形打印功能
+		for(var i=0;i<5;i++){
+			for(var k=4;k>=i;k--){
+				document.write('&nbsp;');
+			}
+			for(var j=0;j<5+i*2;j++){
+				document.write('*');
+			}
+			document.write('<br>');
+		}
+		</script>
+	</body>
+</html>
